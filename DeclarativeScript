@@ -1,26 +1,31 @@
-pipeline{
-   agent any
-      stages{
-        stage('Check Validate'){
-        steps{
-           echo 'I Am Validating The Code'
-          }
-           }
-    stage('Compilation'){
-    steps{
-        echo 'I Am Compiling The Code'
-        }
-      }
-    stage('install')
-    steps{
-        echo 'I Am Install The Code'
-      }
-    }
-   stage('Deploy')
-   {
-     steps{
-        echo 'I Am Deploying The Code'
-       }
-    }
-}
+pipeline
+{
+	agent any
+	stages{
+		stage('check validagte'){
+				steps{
+					echo 'I am validating the code'
+				}
+		}
+		stage('Compilation'){
+				steps{
+					echo 'I am compiling the code'
+				}
+		}
+		stage('Install'){
+				steps{
+					echo 'I am installing the code'
+				}
+		}
+		stage('Release'){
+				steps{
+					echo 'I am releasing the code'
+				}	
+		}
+		stage('Deploy'){
+				steps{
+					echo 'I am deploying the code'
+				}
+		}
+	}
 }
